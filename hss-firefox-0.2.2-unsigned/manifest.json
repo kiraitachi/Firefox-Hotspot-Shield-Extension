@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Hotspot Shield Port",
+  "short_name": "HSS Port",
+  "version": "0.2.2",
+  "description": "Unofficial Firefox port of the Hotspot Shield browser extension: routes browser traffic through Hotspot Shield proxy servers, with optional Elite account sign-in.",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "32": "assets/icons/32.png",
+    "48": "assets/icons/48.png",
+    "96": "assets/icons/96.png",
+    "128": "assets/icons/128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hss-firefox-port@local.example",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "browsingActivity",
+          "websiteContent"
+        ],
+        "optional": [
+          "technicalAndInteraction",
+          "authenticationInfo",
+          "personallyIdentifyingInfo"
+        ]
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  },
+  "permissions": [
+    "proxy",
+    "storage",
+    "alarms",
+    "privacy",
+    "<all_urls>"
+  ],
+  "background": {
+    "page": "src/background/background.html"
+  },
+  "browser_action": {
+    "default_title": "Hotspot Shield",
+    "default_icon": {
+      "16": "assets/icons/toolbar-off-16.png",
+      "32": "assets/icons/toolbar-off-32.png"
+    },
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

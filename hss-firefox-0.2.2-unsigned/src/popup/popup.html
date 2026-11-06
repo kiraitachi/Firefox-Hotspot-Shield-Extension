@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hotspot Shield</title>
+    <link rel="stylesheet" href="popup.css" />
+    <script type="module" src="popup.js"></script>
+  </head>
+  <body>
+    <main id="app">
+      <header>
+        <div class="brand">
+          <img class="logo" src="../../assets/icons/48.png" alt="" width="24" height="24" />
+          <h1>Hotspot Shield</h1>
+        </div>
+        <span id="dot" class="dot" aria-hidden="true"></span>
+      </header>
+
+      <section id="hero" aria-live="polite">
+        <p id="headline" class="headline">Loading…</p>
+        <p id="detail" class="detail"></p>
+        <button id="toggle" type="button" disabled>Connect</button>
+      </section>
+
+      <p id="notice" class="notice" role="status" hidden></p>
+
+      <section>
+        <label for="location">Location</label>
+        <select id="location"></select>
+      </section>
+
+      <section id="account">
+        <h2>Account</h2>
+
+        <div id="accountOut">
+          <p id="accountNotice" class="notice" role="status" hidden></p>
+          <p id="accountHint" class="detail">Free plan. Sign in to use your Elite account.</p>
+          <button id="showSignIn" type="button" class="secondary">Sign in</button>
+          <form id="signInForm" hidden novalidate>
+            <label for="email">Email address</label>
+            <input id="email" type="email" autocomplete="username" autocapitalize="off" spellcheck="false" />
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password" />
+            <p id="signInError" class="error" role="alert" hidden></p>
+            <div class="row">
+              <button id="submitSignIn" type="submit" class="secondary">Sign in</button>
+              <button id="cancelSignIn" type="button" class="link">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="accountIn" hidden>
+          <p id="accountLogin" class="login"></p>
+          <p id="accountPlan" class="detail"></p>
+          <button id="signOut" type="button" class="secondary">Sign out</button>
+        </div>
+      </section>
+
+      <section id="site" hidden>
+        <h2 id="siteName"></h2>
+        <label class="check"><input type="checkbox" id="bypass" /><span>Skip the VPN for this site</span></label>
+        <label class="check"><input type="checkbox" id="secured" /><span>Always protect this site</span></label>
+      </section>
+
+      <section>
+        <h2>Settings</h2>
+        <label class="check"><input type="checkbox" id="webrtc" /><span>Block WebRTC while connected</span></label>
+        <label class="check"><input type="checkbox" id="blockWhenDown" /><span>Block traffic if the VPN drops</span></label>
+      </section>
+
+      <details>
+        <summary>Diagnostics</summary>
+        <pre id="diag"></pre>
+      </details>
+    </main>
+  </body>
+</html>
