@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY/main/assets/logo.png" alt="Hotspot Shield Logo" width="120" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq6-OwCJEdHG8-KGZsVatMYfozPf4ZOt877gWP9E-uwjSMqBaAHMbDxl4&s=10" alt="Hotspot Shield Logo" width="120" />
 </p>
 
 # HotspotShield VPN Web Wrapper (Unofficial)
